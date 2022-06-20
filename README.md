@@ -6,7 +6,7 @@ Attention: il s'agit d'une bêta qui ne gère pas toutes les erreurs. De plus, c
 
 # Installation
 
-    git clone ...
+    git clone https://github.com/celuiquelonappelletheo/ssh_bf.git
 
     pip install paramiko
 
