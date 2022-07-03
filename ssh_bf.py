@@ -187,7 +187,7 @@ def main():
         if opt == ("-H"): #Done
             try:
                 for i in file_to_dict(arg):
-                    my_host.append(arg)
+                    my_host.append(i)
             except:
                 print("Fail to import hostname list")
 
