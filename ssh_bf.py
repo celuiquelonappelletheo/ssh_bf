@@ -21,23 +21,6 @@ def init_jump(jump_list,hostname,port):
 
     for index,i in enumerate(jump_list):
 
-        if len(jump_list)==1: #done
-
-            session = paramiko.SSHClient()
-            #auto adding host key
-            session.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-            #connect to jump machine
-            session.connect(hostname=i[0],username=i[1],password=i[2],port=int(i[3]))
-            #set transport var
-            session_transport = session.get_transport()
-            #set usefull addr
-            session_addr = (i[0],int(i[3]))
-            target_addr = (hostname,port)
-            #set channel
-            current_channel = session_transport.open_channel("direct-tcpip", session_addr, target_addr)
-
-            return current_channel
-
         if index == len(jump_list)-1: #done
 
             session = paramiko.SSHClient()
